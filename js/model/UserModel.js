@@ -49,3 +49,24 @@ export const getAboutMeText = async () => {
     throw new Error("Failed to get about me text");
   }
 };
+
+export const getFullUserData = async () => {
+  try {
+    const [user, pokemon, quote, aboutMe] = await Promise.all([
+      getRandomUser(),
+      getRandomPokemon(),
+      getRandomQuote(),
+      getAboutMeText(),
+    ]);
+
+    return {
+      user: user,
+      pokemon: pokemon,
+      quote: quote,
+      aboutMe: aboutMe,
+    };
+  } catch (error) {
+    console.error("Critical error fetching dashboard data:", error);
+    return null;
+  }
+};
