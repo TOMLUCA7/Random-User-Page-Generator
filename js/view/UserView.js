@@ -8,3 +8,14 @@ export const renderUser = (userData) => {
   pictureElement.src = userData.picture.large;
   pictureElement.alt = `${userData.name.first}'s picture`;
 };
+
+export const renderQuote = (quote) => {
+  const quoteElement = document.getElementById("favorite-quote");
+  quoteElement.innerHTML = `Favorite Qoute: ${quote}`;
+};
+
+export const renderPokemon = (pokemon) => {
+  const pokemonImgElement = document.getElementById("pokemon-picture");
+  pokemonImgElement.src = pokemon.img;
+  pokemonImgElement.alt = pokemon.name;
+};
