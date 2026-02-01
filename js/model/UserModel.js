@@ -64,10 +64,10 @@ export const getFullUserData = async () => {
     ]);
 
     return {
-      user: user,
-      pokemon: pokemon,
-      quote: quote,
-      aboutMe: aboutMe,
+      user,
+      pokemon,
+      quote,
+      aboutMe,
     };
   } catch (error) {
     console.error("Critical error fetching dashboard data:", error);
