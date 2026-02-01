@@ -19,3 +19,8 @@ export const renderPokemon = (pokemon) => {
   pokemonImgElement.src = pokemon.img;
   pokemonImgElement.alt = pokemon.name;
 };
+
+export const renderAboutMe = (aboutMeArray) => {
+  const aboutMeElement = document.getElementById("about-me");
+  aboutMeElement.innerText = aboutMeArray[0];
+};
