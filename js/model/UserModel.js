@@ -70,7 +70,6 @@ export const getFullUserData = async () => {
       aboutMe,
     };
   } catch (error) {
-    console.error("error fetching data from API's:", error);
-    return null;
+    throw new Error("error fetching data from API's:", error.message);
   }
 };
