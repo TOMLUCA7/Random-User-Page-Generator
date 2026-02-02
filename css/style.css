@@ -16,14 +16,29 @@ body {
     gap: 20px;
 }
 
+/* Cards container - side by side layout */
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 850px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 /* Card base styles */
 .card {
     background-color: #fff;
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
+    width: 350px;
     text-align: center;
 }
 
@@ -33,6 +48,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    height: 100%;
 }
 
 .name {
@@ -46,7 +62,7 @@ body {
     height: 120px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid #007bff;
+    border: 2px solid #007bff;
 }
 
 .about-me {
@@ -125,16 +141,9 @@ body {
     cursor: pointer;
     font-size: 16px;
     font-weight: 500;
-    transition: background-color 0.3s, transform 0.2s;
 }
 
 .generate-user-button:hover {
     background-color: #0056b3;
     transform: scale(1.05);
-}
-
-.generate-user-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-    transform: none;
 }
