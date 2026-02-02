@@ -1,5 +1,5 @@
 // Application entry point
-import { init } from "./controller/UserController.js";
+import { renderContent } from "./controller/UserController.js";
 
 // Initialize the app when DOM is ready
-document.addEventListener("DOMContentLoaded", init);
+document.addEventListener("DOMContentLoaded", renderContent);

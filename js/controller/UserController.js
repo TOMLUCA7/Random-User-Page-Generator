@@ -39,7 +39,7 @@ const generateNewUser = async () => {
   }
 };
 
-export const init = () => {
+export const renderContent = () => {
   const generateButton = document.getElementById("generate-user-btn");
   generateButton.addEventListener("click", generateNewUser);
 

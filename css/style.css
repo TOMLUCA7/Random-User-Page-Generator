@@ -16,15 +16,13 @@ body {
     gap: 20px;
 }
 
-/* Cards container - side by side layout */
+/* disply the card side by side*/
 .cards-container {
     display: flex;
     flex-direction: row;
     gap: 30px;
-    align-items: flex-start;
 }
 
-/* Responsive: stack on smaller screens */
 @media (max-width: 850px) {
     .cards-container {
         flex-direction: column;
