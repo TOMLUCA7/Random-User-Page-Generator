@@ -35,6 +35,6 @@ export const renderFriends = (friendsArray) => {
       .map((f) => `${f.name.first} ${f.name.last}`)
       .join("\n");
   } else {
-    friendsElement.innerText = "No friends to show yet";
+    friendsElement.innerText = "You Have No Friends";
   }
 };
