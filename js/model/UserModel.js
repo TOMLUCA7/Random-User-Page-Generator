@@ -70,7 +70,7 @@ export const getFullUserData = async () => {
       aboutMe,
     };
   } catch (error) {
-    console.error("Critical error fetching dashboard data:", error);
+    console.error("error fetching data from API's:", error);
     return null;
   }
 };
