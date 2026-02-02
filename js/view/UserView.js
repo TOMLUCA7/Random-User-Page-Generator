@@ -31,9 +31,10 @@ export const renderAboutMe = (aboutMeArray) => {
 export const renderFriends = (friendsArray) => {
   const friendsElement = document.getElementById("show-friends");
   if (friendsArray && friendsArray.length > 0) {
-    friendsElement.innerText = friendsArray
+    const names = friendsArray
       .map((f) => `${f.name.first} ${f.name.last}`)
-      .join("\n");
+      .join(", ");
+    friendsElement.innerText = `Friends ${names}`;
   } else {
     friendsElement.innerText = "You Have No Friends";
   }
