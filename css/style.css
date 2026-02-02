@@ -132,6 +132,8 @@ body {
     gap: 15px;
 }
 
+
+
 .generate-user-button {
     background-color: #007bff;
     color: #fff;
@@ -141,6 +143,17 @@ body {
     cursor: pointer;
     font-size: 16px;
     font-weight: 500;
+}
+
+/* Select dropdown styling */
+select.generate-user-button {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px;
 }
 
 .generate-user-button:hover {
