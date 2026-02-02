@@ -11,13 +11,16 @@ export const renderUser = (userData) => {
 
 export const renderQuote = (quote) => {
   const quoteElement = document.getElementById("favorite-quote");
-  quoteElement.innerHTML = `Favorite Qoute: ${quote}`;
+  quoteElement.innerText = `"${quote}"`;
 };
 
 export const renderPokemon = (pokemon) => {
   const pokemonImgElement = document.getElementById("pokemon-picture");
+  const pokemonNameElement = document.getElementById("pokemon-name");
+
   pokemonImgElement.src = pokemon.img;
   pokemonImgElement.alt = pokemon.name;
+  pokemonNameElement.innerText = pokemon.name;
 };
 
 export const renderAboutMe = (aboutMeArray) => {
@@ -27,9 +30,11 @@ export const renderAboutMe = (aboutMeArray) => {
 
 export const renderFriends = (friendsArray) => {
   const friendsElement = document.getElementById("show-friends");
-  if (friendsArray) {
+  if (friendsArray && friendsArray.length > 0) {
     friendsElement.innerText = friendsArray
       .map((f) => `${f.name.first} ${f.name.last}`)
-      .join(", ");
+      .join("\n");
+  } else {
+    friendsElement.innerText = "No friends to show yet";
   }
 };
