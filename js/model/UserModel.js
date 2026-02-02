@@ -25,7 +25,7 @@ const getRandomPokemon = async () => {
     const data = await response.json();
     return {
       name: data.name,
-      img: data.url,
+      img: data.sprites.front_default,
     };
   } catch (error) {
     throw new Error("Failed to get random pokemon");

@@ -24,3 +24,12 @@ export const renderAboutMe = (aboutMeArray) => {
   const aboutMeElement = document.getElementById("about-me");
   aboutMeElement.innerText = aboutMeArray[0];
 };
+
+export const renderFriends = (friendsArray) => {
+  const friendsElement = document.getElementById("show-friends");
+  if (friendsArray) {
+    friendsElement.innerText = friendsArray
+      .map((f) => `${f.name.first} ${f.name.last}`)
+      .join(", ");
+  }
+};
