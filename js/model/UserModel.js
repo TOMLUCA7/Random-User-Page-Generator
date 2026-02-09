@@ -1,6 +1,3 @@
-// all the logic for the user model
-// only use functions
-
 const USER_API_URL = "https://randomuser.me/api/1.4/";
 const GET_POKEMON_API_URL = "https://pokeapi.co/api/v2/pokemon/";
 const GET_QUOTE_API_URL = "https://api.kanye.rest";
